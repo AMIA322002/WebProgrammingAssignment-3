@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and External Stylesheets -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO:EON - Home</title>
+    <link rel="stylesheet" href="index.css"> <!-- Main stylesheet -->
+    <link rel="stylesheet" href="utility-style.css"> <!-- Utility classes for styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Font Awesome for icons -->
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Daily News Logo"></a> <!-- Logo linking to homepage -->
+        </div>
+        <div class="nav-links">
+            <a href="article.html">Top Stories</a> <!-- Link to top stories page -->
+            <a href="#">Member's Login</a> <!-- Placeholder for login -->
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-bar"> <!-- Search input field -->
+                <a href="#"><i class="fa-solid fa-magnifying-glass" aria-label="Search"></i></a> <!-- Search icon -->
+            </div>
+        </div>
+
+        <!-- Hamburger Menu (Mobile) -->
+        <div class="hamburger-menu" id="hamburger" aria-label="Open menu" tabindex="0" onclick="toggleDrawer()">
+            <i class="fa-solid fa-bars"></i> <!-- Mobile navigation menu icon -->
+        </div>
+    </nav>
+
+    <!-- Drawer Menu (Mobile Navigation) -->
+    <div id="drawer" class="drawer" aria-hidden="true"> <!-- Hidden by default -->
+        <div class="drawer-content">
+            <button class="closebtn" aria-label="Close menu" onclick="toggleDrawer()">&times;</button> <!-- Close button -->
+            <a href="article.html">Top Stories</a>
+            <a href="#">Member's Login</a>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <a href="#"><i class="fa-solid fa-magnifying-glass" aria-label="Search"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <header class="hero">
+            <img src="hero.png" alt="Homepage Image"> <!-- Large banner image -->
+        </header>
+
+        <!-- News Briefing Section -->
+        <section class="news-briefing">
+            <h2>Top Stories</h2>
+            <section class="news-grid"> <!-- Grid layout for news items -->
+                <div class="news-item">
+                    <img src="news1.png" alt="ARCHIVED DREAMS">
+                    <h3>ARCHIVED DREAMS</h3>
+                    <p>Explore how you can store your imagined dreams into a digital archiving website that can be publicly viewed by the masses.</p>
+                    <a href="article.html">Read More</a>
+                </div>
+
+                <div class="news-item">
+                    <img src="news2.png" alt="SOUL EATER">
+                    <h3>SOUL EATER</h3>
+                    <p>Current breakthrough in neurobiological science has proved that we are able to "consume" our beloved ones.</p>
+                    <a href="article2.html">Read More</a>
+                </div>
+
+                <div class="news-item">
+                    <img src="news3.png" alt="FOURTH IMPACT">
+                    <h3>FOURTH IMPACT</h3>
+                    <p>New studies reveal the accelerating impact of certain astronomical objects that may doom us as a species.</p>
+                    <a href="article3.html">Read More</a>
+                </div>
+
+                <div class="news-item">
+                    <img src="news4.png" alt="PARANOIA AGENT">
+                    <h3>PARANOIA AGENT</h3>
+                    <p>UN has addressed the unknown psychological conditions of constantly being on high alert without any ulterior motives.</p>
+                    <a href="article4.html">Read More</a>
+                </div>
+            </section> 
+        </section> 
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a>
+        </div>
+        <p>© NEO:EON 2025</p>
+    </footer>
+
+<script>
+    function toggleDrawer() {
+        const drawer = document.getElementById('drawer');
+        
+        if (drawer.classList.contains('open')) {
+            drawer.classList.remove('open');
+            drawer.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = ''; // Restore scrolling when closed
+        } else {
+            drawer.classList.add('open');
+            drawer.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling when open
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        // Close Drawer when clicking outside of it
+        document.addEventListener('click', (event) => {
+            const drawer = document.getElementById('drawer');
+            const hamburger = document.getElementById('hamburger');
+            
+            if (drawer.classList.contains('open') &&
+                !drawer.contains(event.target) &&
+                !hamburger.contains(event.target)) {
+                toggleDrawer();
+            }
+        });
+        
+        // Close Drawer on Escape Key
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                const drawer = document.getElementById('drawer');
+                if (drawer.classList.contains('open')) toggleDrawer();
+            }
+        });
+    });
+</script>
+</body>
+</html>

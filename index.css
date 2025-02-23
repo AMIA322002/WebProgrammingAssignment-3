@@ -1,0 +1,204 @@
+/* Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure body and html take up full height */
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+/* Main Content */
+main {
+    flex: 1; /* Allow main to grow and push the footer down */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Body Styles */
+body {
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #0c234b;
+    color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Center the logo */
+.navbar .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar .logo img {
+    width: clamp(80px, 10vw, 120px);
+    height: auto;
+}
+
+/* Keep links and search bar on the right */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 2vw, 2rem);
+    margin-left: auto; /* Push to the right */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(16px, 2vw, 18px);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar {
+    padding: 6px 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: transparent;
+    color: white;
+    width: 150px;
+    transition: width 0.3s ease;
+}
+
+.search-bar:focus {
+    width: 200px;
+    background-color: white;
+    color: black;
+}
+
+/* Ensure hamburger menu is aligned to the left */
+.hamburger-menu {
+    display: none; /* Hidden on larger screens */
+    cursor: pointer;
+}
+
+/* Drawer Menu */
+.drawer {
+    height: 100%;
+    width: 0; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #81D3EB;
+    overflow-x: hidden;
+    transition: width 0.3s ease-in-out; /* Smooth animation */
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Open state */
+.drawer.open {
+    width: 250px; /* Set a visible width */
+}
+
+.drawer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.drawer a {
+    padding: clamp(10px, 2vw, 13px) clamp(20px, 4vw, 32px);
+    text-decoration: none;
+    font-size: clamp(18px, 2.5vw, 20px);
+    color: white;
+    display: block;
+    transition: color 0.3s;
+}
+
+.drawer a:hover {
+    color: #f1f1f1;
+}
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block; /* Show on small screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide links on mobile */
+    }
+}
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-top: 0; /* Ensure no margin above */
+    width: 100%;
+    height: auto;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure cover without distortion */
+    display: block; /* Avoid whitespace below image */
+}
+
+/* News Grid */
+.news-briefing {
+    flex: 1;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 190%;
+    padding: 1rem;
+    text-align: center;
+    background-color: #AB0520;
+}
+
+.news-grid {
+    display: grid;
+    background-color: #AB0520;
+    font-weight: 100;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(150px, 20vw, 200px), 1fr));
+    gap: clamp(1rem, 2vw, 2rem);
+    padding: 2rem;
+    margin-top: 0; /* Ensure no margin */
+}
+
+.news-item {
+    text-align: center;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+}
+
+/* Footer */
+footer {
+    flex-shrink: 0; /* Ensure footer stays at the bottom */
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #0c234b;
+    color: white;
+}
+
+footer a {
+    color: white;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News - Article</title>
+    <link rel="stylesheet" href="article2.css">
+    <link rel="stylesheet" href="utility-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Daily News Logo"></a>
+        </div>
+        <div class="nav-links">
+            <a href="article.html">Latest News</a>
+            <a href="#">Member's Login</a>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+        </div>
+        <div class="hamburger-menu" onclick="toggleDrawer()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Drawer -->
+    <div id="drawer" class="drawer">
+        <div class="drawer-content">
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleDrawer()">&times;</a>
+            <a href="article.html">Latest News</a>
+            <a href="#">Member's Login</a>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Article -->
+    <article class="news-article-title">
+        <h1>SOUL EATER</h1>
+        <p>[putting us together & forever]</p>
+        <div class="news-article">
+            <!-- First Section (Image Left) -->
+            <div class="news-article-section">
+                <figure class="article-image">
+                    <img src="news2.png" alt="News Article Image">
+                    <figcaption>Image: An artistic visualization from "SOUL EATER" product.</figcaption>
+                </figure>
+                <div class="article-text">
+                    <p>In a chilling breakthrough at the intersection of neuroscience and technology, researchers have discovered a way to “consume” the consciousness of deceased loved ones, effectively integrating fragments of their minds into the living. Dubbed "SOUL EATER" by both scientists and skeptics, the process involves scanning and uploading neural imprints from the recently deceased into an advanced cognitive framework, allowing the memories, emotions, and even personalities of the departed to be accessed by those left behind. While hailed as a revolutionary step toward digital immortality, ethical concerns loom large, with critics questioning whether this is an act of remembrance or a horrifying distortion of identity.</p>
+                </div>
+            </div>
+
+            <!-- Second Section (Image Right - Zigzag) -->
+            <div class="news-article-section reverse">
+                <figure class="article-image">
+                    <img src="newspic2.png" alt="News Article Image">
+                    <figcaption>Image: An eerily reminiscent of a certain videogame titled Cyberpunk 2077.</figcaption>
+                </figure>
+                <div class="article-text">
+                    <p>The technology itself that are hauntingly familiar of Cyberpunk 2077’s concept of engram storage, blurs the line between life and death, pushing humanity into an era where grief and possession intertwine. Some corporations have already begun eyeing the potential of selling "soul imprints" as a means of eternal companionship, sparking fierce debates on consent, autonomy, and the commodification of human existence. As society wrestles with the implications, one thing is clear—this scientific advancement forces us to reconsider what it truly means to be alive, and more disturbingly, whether the dead can ever truly rest.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommended Articles -->
+        <h2>Recommended Articles</h2>
+        <div class="recommended-articles">
+            <a href="article.html">Related Article 1</a>
+            <a href="article3.html">Related Article 3</a>
+            <a href="article4.html">Related Article 4</a>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#">Terms of Use</a>
+        <a href="#"> | </a>
+        <a href="#">Privacy Policy</a>
+        <p>© NEO:EON 2025</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            drawer.classList.toggle('open');
+        }
+    </script>
+
+</body>
+
+</html>

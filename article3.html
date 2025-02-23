@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News - Article</title>
+    <link rel="stylesheet" href="article.css">
+    <link rel="stylesheet" href="utility-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Daily News Logo"></a>
+        </div>
+        <div class="nav-links">
+            <a href="article.html">Latest News</a>
+            <a href="">Member's Login</a>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+        </div>
+        <div class="hamburger-menu" onclick="toggleDrawer()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    
+    <!-- Drawer -->
+    <div id="drawer" class="drawer">
+        <div class="drawer-content">
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleDrawer()">&times;</a>
+            <a href="article.html">Latest News</a>
+            <a href="">Member's Login</a>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Article -->
+<!-- News Article -->
+<article class="news-article-title">
+    <h1>FOURTH IMPACT</h1>
+    <p>[the forthcoming of human instrumentality]</p>
+
+    <!-- Image with Caption -->
+    <figure class="article-image">
+        <img src="news3.png" alt="News Article Image">
+        <figcaption>Image: An artistic visualization from the upcoming "Fourth Impact" disaster.</figcaption>
+    </figure>
+
+    <!-- Text Section -->
+    <div class="article-text">
+        <p>A groundbreaking new study has sent shockwaves through the scientific community, revealing that an unidentified astronomical object is accelerating toward Earth with devastating potential. Dubbed the "Fourth Impact," researchers believe this celestial body—whether an anomalous asteroid, a rogue planet, or something even more enigmatic—could pose an existential threat to humanity. Early models suggest its trajectory is unlike anything previously observed, with inexplicable gravitational anomalies raising questions about its true nature. While government agencies urge caution and further investigation, some experts warn that time may already be running out.</p>
+    </div>
+    <!-- Image with Caption -->
+    <figure class="article-image">
+        <img src="newspic3.png" alt="News Article Image">
+        <figcaption>Image: One of the soulful landscape of earth as the disaster is being imminent. </figcaption>
+    </figure>
+    <!-- More Text -->
+    <div class="article-text">
+        <p>The discovery has ignited global fear, with speculation running rampant over the potential consequences of impact. Some scientists urge for immediate planetary defense measures, while others believe the object may hold secrets about the universe that could change our understanding of space itself. Meanwhile, astronomers scramble to decipher its origins and potential impact, with debates raging over whether humanity has the means—or the will—to prevent an extinction-level event. As the world holds its breath, one question remains: is this the beginning of the end, or merely the prelude to something even more unfathomable?</p>
+    </div>
+
+    <h2>Recommended Articles</h2>
+    <div class="recommended-articles">
+        <a href="article.html">Related Article 1</a>
+        <a href="article2.html">Related Article 2</a>
+        <a href="article4.html">Related Article 4</a>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#">Terms of Use</a>
+        <a href="#"> | </a>
+        <a href="#">Privacy Policy</a>
+        <p>© NEO:EON 2025</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            drawer.classList.toggle('open');
+        }
+    </script>
+
+</body>
+</html>

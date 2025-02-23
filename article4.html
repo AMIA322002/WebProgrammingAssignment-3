@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News - Article</title>
+    <link rel="stylesheet" href="article.css">
+    <link rel="stylesheet" href="utility-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Daily News Logo"></a>
+        </div>
+        <div class="nav-links">
+            <a href="article.html">Latest News</a>
+            <a href="">Member's Login</a>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+        </div>
+        <div class="hamburger-menu" onclick="toggleDrawer()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    
+    <!-- Drawer -->
+    <div id="drawer" class="drawer">
+        <div class="drawer-content">
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleDrawer()">&times;</a>
+            <a href="article.html">Latest News</a>
+            <a href="">Member's Login</a>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+<!-- News Article -->
+<article class="news-article-title">
+    <h1>PARANOIA AGENT</h1>
+    <p>[a product of our society or something more sinister?]</p>
+
+    <!-- Image with Caption -->
+    <figure class="article-image">
+        <img src="news4.png" alt="News Article Image">
+        <figcaption>Image: An artistic visualization from the upcoming "Fourth Impact" disaster.</figcaption>
+    </figure>
+
+    <!-- Text Section -->
+    <div class="article-text">
+        <p>In a recent address, the United Nations has raised concerns over a growing psychological phenomenon where individuals experience persistent hypervigilance without any identifiable external threat. Dubbed "Paranoia Agent Syndrome" by experts, this condition sees people living in a state of constant anxiety, as if anticipating danger at every turn—despite the absence of any real or rational cause. Psychologists suggest that the rise of global uncertainty, rapid information cycles, and social media-fueled fear may be driving this widespread mental strain, with symptoms resembling those of PTSD but lacking a clear traumatic trigger.</p>
+    </div>
+    <!-- Image with Caption -->
+    <figure class="article-image">
+        <img src="newspic4.png" alt="News Article Image">
+        <figcaption>Image: A several social isolation laws has been implemented to prevent the spread of the disease. </figcaption>
+    </figure>
+    <!-- More Text -->
+    <div class="article-text">
+        <p>Health officials are now urging governments to recognize the long-term consequences of this condition, which could lead to increased stress-related illnesses, paranoia-driven social unrest, and deteriorating public trust. Some researchers warn that if left unchecked, this psychological shift could fundamentally alter human behavior, making societies more susceptible to manipulation and control. While solutions remain unclear, experts emphasize the need for awareness, digital mindfulness, and psychological resilience to counteract the growing epidemic of fear without a face.</p>
+    </div>
+
+    <h2>Recommended Articles</h2>
+    <div class="recommended-articles">
+        <a href="article.html">Related Article 1</a>
+        <a href="article2.html">Related Article 2</a>
+        <a href="article3.html">Related Article 3</a>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#">Terms of Use</a>
+        <a href="#"> | </a>
+        <a href="#">Privacy Policy</a>
+        <p>© NEO:EON 2025</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            drawer.classList.toggle('open');
+        }
+    </script>
+
+</body>
+</html>
